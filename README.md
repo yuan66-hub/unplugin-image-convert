@@ -7,6 +7,8 @@ npm add @yuanjianming/unplugin-image-convert
 
 ## 基本使用
 
+- vite.config.js
+
 ```js
 import { defineConfig } from 'vite'
 import { webpackImageConvert } from '@yuanjianming/unplugin-image-convert'
@@ -25,6 +27,30 @@ export default defineConfig({
     })],
 })
 ```
+
+- webpack.config.js
+
+```js
+const { webpackImageConvert } =require('@yuanjianming/unplugin-image-convert')
+
+module.exports ={
+    plugins:[
+        webpackImageConvert({
+                test:/\.(jpe?g|png)$/,
+                encodeOptions:{
+                    webp:{
+                        //   https://sharp.pixelplumbing.com/api-output#webp
+                    },
+                    avif:{
+                        //   https://sharp.pixelplumbing.com/api-output#avif
+                    }
+                }
+        })
+    ]
+}
+
+```
+
 
 
 ## 基础选项

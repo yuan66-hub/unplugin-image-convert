@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/yuan66-hub/unplugin-image-convert.git"
   },
   "keywords": [
     "image-convert",
