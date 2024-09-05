@@ -11,7 +11,7 @@ npm add @yuanjianming/unplugin-image-convert
 
 ```js
 import { defineConfig } from 'vite'
-import { webpackImageConvert } from '@yuanjianming/unplugin-image-convert'
+import { viteImageConvert } from '@yuanjianming/unplugin-image-convert'
 export default defineConfig({
     //....
     plugins: [webpackImageConvert({
