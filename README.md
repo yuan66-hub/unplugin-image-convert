@@ -14,7 +14,7 @@ import { defineConfig } from 'vite'
 import { viteImageConvert } from '@yuanjianming/unplugin-image-convert'
 export default defineConfig({
     //....
-    plugins: [webpackImageConvert({
+    plugins: [viteImageConvert({
          test:/\.(jpe?g|png)$/,
          encodeOptions:{
               webp:{
