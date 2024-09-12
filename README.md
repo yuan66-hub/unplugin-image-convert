@@ -59,7 +59,7 @@ module.exports ={
 
 |  参数   | 类型  | 默认 | 描述 |
 |  ----  | ----  | ---- | ---- |
-| `test`  | `RegExp` | `'/\.(jpe?g|png)$/'` | 监听文件的绝对路径
+| `test`  | `RegExp` | '' | 监听文件的绝对路径
 | `encodeOptions`  | `SharpOutputOption` | `webp:{},avif:{}` | 支持`jpeg`,`png`,`webp`,`avif`,`heif`,`jxl`,`gif`,`Jp2`,`tiff`格式转换
 
 
