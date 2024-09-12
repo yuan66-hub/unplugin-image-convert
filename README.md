@@ -57,7 +57,7 @@ module.exports ={
 
 ##  👨‍💻 Config
 
-|  参数   | 类型  | 默认 | 描述 |
+|  option   | type  | default | describe |
 |  ----  | ----  | ---- | ---- |
 | `test`  | `RegExp` | '' | Regular expression for image resource file path
 | `encodeOptions`  | `SharpOutputOption` | `webp:{},avif:{}` | Support format conversion for `jpeg`, `png`, `webp`, `avif`, `heif`, `jxl`, `gif`, `Jp2`, and `tif`
