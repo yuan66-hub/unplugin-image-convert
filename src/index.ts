@@ -117,8 +117,8 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = options => 
         name: pluginName,
         enforce: 'post',
         vite: {
-            async generateBundle(opt: any) {
-                const { bundle } = opt
+            async transformIndexHtml(html: any, ctx: any) {
+                const { bundle } = ctx
                 for (const key in bundle) {
                     const imgReg = generator.test || /\.(jpe?g|png)$/;
                     if (imgReg.test(key)) {
@@ -127,14 +127,15 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = options => 
                         const encodeOptions: any = generator.encodeOptions
                         for (const key in encodeOptions) {
                             const newBuffer = await sharpStream.clone().toFormat(key as keyof FormatEnum, encodeOptions[key]).toBuffer()
-                            this.emitFile({
+                            ctx.bundle[`${fileName}.${key}`] = {
                                 type: 'asset',
                                 fileName: `${fileName}.${key}`,
                                 source: newBuffer
-                            })
+                            }
                         }
                     }
                 }
+                return html
             }
         },
         webpack(compiler: Compiler) {
