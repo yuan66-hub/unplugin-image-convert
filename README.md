@@ -4,7 +4,7 @@
 ## 📦 Install
 
 ```bash
-npm add @yuanjianming/unplugin-image-convert
+npm add @yuanjianming/unplugin-image-convert -D
 ```
 
 ## 💪 Basic Use
@@ -59,8 +59,8 @@ module.exports ={
 
 |  参数   | 类型  | 默认 | 描述 |
 |  ----  | ----  | ---- | ---- |
-| `test`  | `RegExp` | '' | 转换文件的正则表达式
-| `encodeOptions`  | `SharpOutputOption` | `webp:{},avif:{}` | 支持`jpeg`,`png`,`webp`,`avif`,`heif`,`jxl`,`gif`,`Jp2`,`tiff`格式转换
+| `test`  | `RegExp` | '' | Regular expression for image resource file path
+| `encodeOptions`  | `SharpOutputOption` | `webp:{},avif:{}` | Support format conversion for `jpeg`, `png`, `webp`, `avif`, `heif`, `jxl`, `gif`, `Jp2`, and `tif`
 
 
 ## 💪 Default Config
