@@ -1,11 +1,11 @@
 
-## 安装
+## Install
 
 ```bash
 npm add @yuanjianming/unplugin-image-convert
 ```
 
-## 基本使用
+## Basic Use
 
 - vite.config.js
 
@@ -53,7 +53,7 @@ module.exports ={
 
 
 
-## 基础选项
+## Config
 
 |  参数   | 类型  | 默认 | 描述 |
 |  ----  | ----  | ---- | ---- |
