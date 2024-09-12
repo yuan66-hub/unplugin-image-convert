@@ -1,11 +1,13 @@
 
-## Install
+# ✨ unplugin-image-convert
+
+## 📦 Install
 
 ```bash
 npm add @yuanjianming/unplugin-image-convert
 ```
 
-## Basic Use
+## 💪 Basic Use
 
 - vite.config.js
 
@@ -53,13 +55,29 @@ module.exports ={
 
 
 
-## Config
+##  👨‍💻 Config
 
 |  参数   | 类型  | 默认 | 描述 |
 |  ----  | ----  | ---- | ---- |
-| `test`  | `RegExp` | '' | 监听文件的绝对路径
+| `test`  | `RegExp` | `'/\.(jpe?g|png)$/'` | 监听文件的绝对路径
 | `encodeOptions`  | `SharpOutputOption` | `webp:{},avif:{}` | 支持`jpeg`,`png`,`webp`,`avif`,`heif`,`jxl`,`gif`,`Jp2`,`tiff`格式转换
 
+
+## 💪 Default Config
+
+```js
+{
+                test:/\.(jpe?g|png)$/,
+                encodeOptions:{
+                    webp:{
+                        //   https://sharp.pixelplumbing.com/api-output#webp
+                    },
+                    avif:{
+                        //   https://sharp.pixelplumbing.com/api-output#avif
+                    }
+                }
+}
+```
 
 
 
