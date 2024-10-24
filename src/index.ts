@@ -4,7 +4,7 @@ import { createUnplugin } from 'unplugin'
 import sharp, { FormatEnum } from 'sharp'
 import type { Sharp } from 'sharp'
 import type { Compilation, Compiler } from 'webpack'
-import type { JpegOptions, PngOptions, WebpOptions, AvifOptions, HeifOptions, JxlOptions, GifOptions, Jp2Options, TiffOptions } from 'sharp'
+import type { Options } from './types'
 
 const RED = '\x1b[31m%s\x1b[0m'; // 控制台颜色
 const GREEN = '\x1b[32m%s\x1b[0m';// 控制台颜色
@@ -15,24 +15,7 @@ const unitConvert = (size: number): string => {
     return `${Math.floor(size / 1024)} KB`
 }
 
-export type SharpOutputOption = {
-    jpeg?: JpegOptions;
-    png?: PngOptions;
-    webp?: WebpOptions;
-    avif?: AvifOptions;
-    heif?: HeifOptions;
-    jxl?: JxlOptions;
-    gif?: GifOptions;
-    Jp2?: Jp2Options;
-    tiff?: TiffOptions
-};
 
-
-export interface Options {
-    // define your plugin options here
-    test: RegExp,
-    encodeOptions: SharpOutputOption
-}
 
 export const unpluginFactory: UnpluginFactory<Options | undefined> = options => {
 
@@ -162,9 +145,9 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = options => 
 }
 
 
-const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
 
-export const webpackImageConvert = unplugin.webpack
-export const viteImageConvert = unplugin.vite
 
+export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
+
+export default unplugin
 

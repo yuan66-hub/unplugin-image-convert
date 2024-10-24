@@ -13,7 +13,7 @@ npm add @yuanjianming/unplugin-image-convert -D
 
 ```js
 import { defineConfig } from 'vite'
-import { viteImageConvert } from '@yuanjianming/unplugin-image-convert'
+import viteImageConvert from '@yuanjianming/unplugin-image-convert/vite'
 export default defineConfig({
     //....
     plugins: [viteImageConvert({
@@ -33,7 +33,7 @@ export default defineConfig({
 - webpack.config.js
 
 ```js
-const { webpackImageConvert } =require('@yuanjianming/unplugin-image-convert')
+const webpackImageConvert =require('@yuanjianming/unplugin-image-convert/webpack')
 
 module.exports ={
     plugins:[
