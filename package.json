@@ -1,6 +1,6 @@
 {
   "name": "@yuanjianming/unplugin-image-convert",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
